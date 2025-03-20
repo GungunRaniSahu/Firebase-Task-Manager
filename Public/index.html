@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="auth.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="outer-div">
+            <div id="inner-div">
+    <h2>Welcome Back</h2>
+    <h6>Welcome Back! PLease enter your details.</h6>
+    <p>Email</p>
+    <input type="email" id="email" placeholder="Enter email">
+    <p>Password</p>
+    <input type="password" id="password" placeholder="Enter password">
+    
+   <div id="login-button"> <button onclick="login()">Login</button> </div>
+
+    <p id="signup-text">Don't have an account? <a href="signup.html">Sign up here</a></p>
+</div></div>
+<div id="second-side">
+<img src="logo.png" id="image">
+</div></div>
+    <script>
+
+        import { auth } from './firebase-config.js';
+        import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js';
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                window.location.href = "tasks.html";
+            }
+        });
+    </script>
+</body>
+</html>
