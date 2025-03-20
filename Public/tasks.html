@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="tasks.css">
+    <script type="module" src="tasks.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter your task...">
+            <select id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <input type="date" id="dueDate">
+            <button class="add-task-btn" onclick="addTask()">+ Add Task</button>
+        </div>
+
+        <h2>Your Tasks</h2>
+        <ul id="taskList"></ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script type="module">
+       
+        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+    
+       
+        const auth = getAuth();
+        console.log(auth);
+    
+       
+        function logout() {
+            signOut(auth)
+                .then(() => {
+                    console.log("User logged out successfully.");
+                    window.location.href = "index.html"; 
+                })
+                .catch((error) => {
+                    console.error("Logout Error:", error);
+                });
+        }
+    
+        
+        window.logout = logout;
+    </script>
+    
+    
+</body>
+</html>
