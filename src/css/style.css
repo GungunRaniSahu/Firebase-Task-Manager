@@ -1,0 +1,140 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #854dc01c, #7156a2eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container
+{
+    width: 65%;
+    height: 70%;
+    display: flex;
+}
+
+#outer-div
+{
+    background-color: white;
+    width: 50%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2
+{
+    padding: 0px;
+    margin-top: -17px;
+    margin-bottom: 6px;
+}
+
+h6
+{
+    padding: 0px;
+    margin: 0px;
+    font-weight: normal;
+    
+}
+#inner-div
+{
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  /*  border: 1px solid black;*/
+    height: 80%;
+    margin-top: 30%;
+}
+
+
+p{
+    padding: 0px;
+    margin: 0px;
+    font-size: x-small;
+    margin-top: 13px;
+}
+
+
+#email
+{
+    border: 1px solid grey;
+    width: 100%;
+    height: 10%;
+    border-radius: 8px;
+    margin-top: 5px;
+    padding-left: 10px;  
+    box-sizing: border-box; 
+}
+
+
+#password
+{
+    border: 1px solid grey;
+    width: 100%;
+    height: 10%;
+    border-radius: 8px;
+    margin-top: 5px;
+    padding-left: 10px;  
+    box-sizing: border-box; 
+   
+}
+
+button {
+    border: 1px solid #613eb7;
+    width: 100%;
+    background-color: #613eb7;
+    margin-top: 13px;
+    border-radius: 8px;
+    height: 34px; 
+    color: white; 
+    font-size: 14px; 
+    cursor: pointer; 
+}
+
+#signup-text {
+    text-align: center;  
+    display: block;   
+    margin-top: 10px; 
+    font-size: 13px;
+
+}
+
+@media (max-width: 500px) {
+    #container {
+        width: 80%;
+        height: auto;
+    }
+}
+
+button:hover {
+    background-color: #4b2e9a;
+}
+
+#signup-text a:hover {
+    text-decoration: underline;
+}
+
+#signup-text a {
+    color: #613eb7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#second-side
+{
+    background-color: #f3f5f9;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 40%;
+
+}
