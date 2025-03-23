@@ -22,7 +22,7 @@ A **simple and efficient Task Manager** that allows users to **sign up, log in, 
  ┃ ┣ 📜 signup.html      # Signup Page
  ┃ ┣ 📜 dashboard.html   # Main Task Manager Page
  ┣ 📂 css          # Stylesheets
- ┣ 📂 js           # JavaScript files
+ ┣ 📂 src           # JavaScript files
  ┃ ┣ 📜 firebase.js    # Firebase config & functions
  ┃ ┣ 📜 auth.js        # Signup & login logic
  ┃ ┣ 📜 dashboard.js   # Task management logic
